@@ -18,7 +18,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/admin/delete', 'adminController@delete');
 });
 
-
+//Route::auth();
 //Route::get('/home', 'HomeController@index');
 
 
