@@ -46,7 +46,7 @@
                                             {!! Form::text('fnm', null,['class'=>'form-control']) !!}
 
                                             {!! Form::label('lnm', 'Lastname') !!}
-                                            {!! Form::text('lnm', null,['class'=>'form-control']) !!}
+                                            {!! Form::password('lnm', null,['class'=>'form-control']) !!}
 
                                             {!! Form::label('', '') !!}
                                             {!! Form::submit ('Login') !!}

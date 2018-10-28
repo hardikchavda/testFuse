@@ -27,29 +27,25 @@
                                     <li>
                                         @if(!Auth::guest())
                                     <li>
-                                        <a href="#">CRUD</a>
-                                        <ul>
-                                            <li><a href="{{ action('adminController@edit') }}">Edit Userinfo</li>
-                                            <li><a href="{{ action('adminController@delete') }}">Delete Userinfo</a></li>                                                                                      
-                                        </ul>
-                                    </li> 
-                                     <li>
+
+                                    </li>
+                                    <li>
                                         <a href="#">{{Auth::user()->name}}</a>
                                         <ul>
                                             <li><a href="{{ action('adminController@logout')}}">Logout</li>
                                         </ul>
-                                    </li>                                     
-                                                @else
-                                                <li> <a href="{{ action('adminController@login') }}">Login
-                                                    @endif
-                                                </a></li>
-                                                </ul>
-                                                </nav>
+                                    </li>
+                                    @else
+                                    <li> <a href="{{ action('adminController@login') }}">Login
+                                            @endif
+                                        </a></li>
+                                </ul>
+                            </nav>
 
-                                                </div>
-                                                </header>
+                        </div>
+                    </header>
 
 
 
-                                                </div>
-                                                </div>
+                </div>
+            </div>

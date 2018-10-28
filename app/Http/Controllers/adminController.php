@@ -30,7 +30,7 @@ class adminController extends Controller {
 
     public function logout() {
         Auth::logout();
-        return Redirect::to('/admin/login');
+        return Redirect::to(\URL::previous());
     }
 
     public function alldata() {
@@ -39,12 +39,14 @@ class adminController extends Controller {
         return view('/admin/alldata', compact('data'));
     }
 
-    public function edit() {
-        return view('/admin/edit');
+    public function edit($id) {
+        $data = userInfo::findOrFail($id);
+        return view('/admin/edit')->withData($data);
     }
 
-    public function delete() {
-        return view('/admin/edit');
+    public function delete($id) {
+        $data = userInfo::findOrFail($id);
+        return view('/admin/edit')->withData($data);
     }
 
 }

@@ -12,10 +12,17 @@ Route::get('/admin/login', 'adminController@login');
 Route::post('/admin/logincheck', 'adminController@logincheck');
 Route::get('/admin/logout', 'adminController@logout');
 
-Route::group(['middleware' => 'auth'], function() {
-    Route::get('/admin/alldata', 'adminController@alldata');
-    Route::get('/admin/edit', 'adminController@edit');
-    Route::get('/admin/delete', 'adminController@delete');
+Route::group(['middleware' => 'prevent-back-history'], function() {
+
+    Route::group(['middleware' => 'guest'], function () {
+        Route::get('/admin/login', 'adminController@login');
+    });
+
+    Route::group(['middleware' => 'auth'], function() {
+        Route::get('/admin/alldata', 'adminController@alldata');
+        Route::get('/admin/edit/{id}', 'adminController@edit');
+        Route::get('/admin/delete{id}', 'adminController@delete');
+    });
 });
 
 //Route::auth();

@@ -13,31 +13,19 @@
 
                         <!-- Excerpt -->
 
-                        <table class="table-borderless" border="5" style="border-style: dashed" >
+                        <table >
                             <tr >
                                 <td style="padding: 5px">FirstName</td>
                                 <td style="padding: 5px">MiddleName</td>
                                 <td style="padding: 5px">LastName</td>
-                                <td style="padding: 5px">FirstName</td>
-                                <td style="padding: 5px">MiddleName</td>
-                                <td style="padding: 5px">LastName</td>
-                                <td style="padding: 5px">FirstName</td>
-                                <td style="padding: 5px">MiddleName</td>
-                                <td style="padding: 5px">LastName</td>
-                                <td style="padding: 5px">FirstName</td>
-                                <td style="padding: 5px">MiddleName</td>
-                                <td style="padding: 5px">LastName</td>
-                                <td style="padding: 5px">FirstName</td>
-                                <td style="padding: 5px">MiddleName</td>
-                                <td style="padding: 5px">LastName</td>
-
-
                             </tr>
                             @forelse($data as $userData)
                             <tr>
                                 <td style="padding: 5px; ">{{$userData->firstname}}</td>
                                 <td style="padding: 5px">{{$userData->middlename}}</td>
                                 <td style="padding: 5px">{{$userData->lastname}}</td>
+                                <td><a href="/admin/edit/{{$userData->id}}">Edit</a></td>
+                                <td><a href="/admin/delete/{{$userData->id}}">Del</a></td>
                             </tr>
                             @empty
                             Nothing In List

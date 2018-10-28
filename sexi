@@ -1,0 +1,66 @@
+[33mcommit 0dcbd71bcec8c0b5cdff012f645693a930bbc99f[m
+Author: GARV <GARV@DESKTOP-487UR5P>
+Date:   Sat Oct 27 20:01:23 2018 +0530
+
+    There is no data named middlename sorry.
+
+[33mcommit 9407149a6b6579ec42c06145bf352dac60a40d63[m
+Merge: 0e09cf7 42302b9
+Author: GARV <GARV@DESKTOP-487UR5P>
+Date:   Sat Oct 27 19:58:35 2018 +0530
+
+    Merge origin/master
+
+[33mcommit 42302b997a79dcd5e0a15946a22ebf5a0abef79d[m
+Author: Hardik Chavda <hardikkchavda@gmail.com>
+Date:   Sat Oct 27 19:18:16 2018 +0530
+
+    Update userInfo.php
+
+[33mcommit 0e09cf78bbeff31f13c0c65bc46e688ebe9a44f7[m
+Author: GARV <GARV@DESKTOP-487UR5P>
+Date:   Sat Oct 27 19:16:22 2018 +0530
+
+    Revert "Update routes.php"
+    
+    This reverts commit 92eb807dfafe6e222eb517d5b11551016d348544.
+
+[33mcommit 92eb807dfafe6e222eb517d5b11551016d348544[m
+Author: Hardik Chavda <hardikkchavda@gmail.com>
+Date:   Sat Oct 27 19:05:39 2018 +0530
+
+    Update routes.php
+
+[33mcommit d0339d3d009dd083a52c50b539feab339d5443de[m
+Author: LOCKED <LOCKED@STUD-PC>
+Date:   Sat Oct 27 13:59:00 2018 +0530
+
+    test
+
+[33mcommit 8e3a863d872563312371ebe49981e93315362283[m
+Author: LOCKED <LOCKED@STUD-PC>
+Date:   Sat Oct 27 13:58:13 2018 +0530
+
+    Testinf
+
+[33mcommit 8eba030e8fd5beb90ecc9b8c9544c6d2929ec164[m
+Author: LOCKED <LOCKED@STUD-PC>
+Date:   Sat Oct 27 13:57:18 2018 +0530
+
+    Staged Data
+
+[33mcommit 6ddaf293886e3a4efbfe97ec3654641c24382836[m
+Author: LOCKED <LOCKED@STUD-PC>
+Date:   Sat Oct 27 13:04:07 2018 +0530
+
+[33mcommit 206c26da3ae10213bfd2255aa79e5b31d023e296[m
+Author: LOCKED <LOCKED@STUD-PC>
+Date:   Sat Oct 27 12:59:57 2018 +0530
+
+[33mcommit dd8531e0f24f11f9b500b738016bf2fd18bd1036[m
+Author: LOCKED <LOCKED@STUD-PC>
+Date:   Sat Oct 27 09:09:43 2018 +0530
+
+[33mcommit 9e18502d54c75b3d3b874d8760e31508d43d082a[m
+Author: LOCKED <LOCKED@STUD-PC>
+Date:   Sat Oct 27 09:00:58 2018 +0530
