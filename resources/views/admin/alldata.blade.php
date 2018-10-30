@@ -24,17 +24,47 @@
                                 <td style="padding: 5px; ">{{$userData->firstname}}</td>
                                 <td style="padding: 5px">{{$userData->middlename}}</td>
                                 <td style="padding: 5px">{{$userData->lastname}}</td>
-                                <td><a href="/admin/edit/{{$userData->id}}">Edit</a></td>
-                                <td><a href="/admin/delete/{{$userData->id}}">Del</a></td>
+                                <td><a href="/admin/{{$userData->id}}/edit">Edit</a></td>
+                                <td><a href="/admin/{{$userData->id}}/delete">Del</a></td>
                             </tr>
                             @empty
                             Nothing In List
                             @endforelse
 
                         </table>
+                        <button id="dialog-link" class="ui-button ui-corner-all ui-widget">
+                            <span class="ui-icon ui-icon-newwin"></span>Open Dialog
+                        </button>
+                        <div id="dialog" title="Dialog Title">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
 
+                        <script>
+                            $("#dialog").dialog({
+                                autoOpen: false,
+                                width: 400,
+                                buttons: [
+                                    {
+                                        text: "Ok",
+                                        click: function() {
+                                            $(this).dialog("close");
+                                        }
+                                    },
+                                    {
+                                        text: "Cancel",
+                                        click: function() {
+                                            $(this).dialog("close");
+                                        }
+                                    }
+                                ]
+                            });
 
+                            $("#dialog-link").click(function(event) {
+                                $("#dialog").dialog("open");
+                                event.preventDefault();
+                            });
 
+                        </script>
 
                     </section>
                 </div>

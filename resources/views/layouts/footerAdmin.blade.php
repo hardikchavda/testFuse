@@ -13,13 +13,5 @@
 
 </div>
 
-<!-- Scripts -->
-<script src="{{URL::asset('/asset/js/jquery.min.js')}}"></script>
-<script src="{{URL::asset('/asset/js/jquery.dropotron.min.js')}}"></script>
-<script src="{{URL::asset('/asset/js/browser.min.js')}}"></script>
-<script src="{{URL::asset('/asset/js/breakpoints.min.js')}}"></script>
-<script src="{{URL::asset('/asset/js/util.js')}}"></script>
-<script src="{{URL::asset('/asset/js/main.js')}}"></script>
-
 </body>
 </html>

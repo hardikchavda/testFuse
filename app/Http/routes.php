@@ -20,11 +20,13 @@ Route::group(['middleware' => 'prevent-back-history'], function() {
 
     Route::group(['middleware' => 'auth'], function() {
         Route::get('/admin/alldata', 'adminController@alldata');
-        Route::get('/admin/edit/{id}', 'adminController@edit');
-        Route::get('/admin/delete{id}', 'adminController@delete');
+        Route::get('/admin/{id}/edit', 'adminController@edit');
+        Route::get('/admin/{id}/delete', 'adminController@delete');
+        Route::patch('/admin/update/{id}', 'adminController@update');
+        Route::delete('/admin/destroy/{id}', 'adminController@destroy');
     });
 });
-
+//Route::resource('crud', 'crudController');
 //Route::auth();
 //Route::get('/home', 'HomeController@index');
 

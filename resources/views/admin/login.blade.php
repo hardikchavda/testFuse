@@ -55,10 +55,7 @@
                                             @endif
                                             {!! Form::close() !!}
                                         </article>
-
-
-
-                                    </section                                        >
+                                    </section>
                                 </div>
 
                             </div>

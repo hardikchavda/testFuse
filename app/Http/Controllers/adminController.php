@@ -46,7 +46,18 @@ class adminController extends Controller {
 
     public function delete($id) {
         $data = userInfo::findOrFail($id);
-        return view('/admin/edit')->withData($data);
+        return view('/admin/delete')->withData($data);
+    }
+
+    public function update($id, Request $req) {
+        $data = userInfo::findOrFail($id);
+        $data->update($req->all());
+        return redirect()->back()->withSuccess('IT WORKS!');
+    }
+
+    public function destroy($id) {
+        $data = userInfo::destroy($id);
+        return Redirect::to('/admin/alldata');
     }
 
 }
