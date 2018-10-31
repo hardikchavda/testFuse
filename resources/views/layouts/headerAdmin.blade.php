@@ -5,6 +5,19 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="{{URL::asset('asset/css/main.css')}}" />
+        <link rel="stylesheet" href="{{URL::asset('asset/jquery-ui.min.css')}}" />
+
+        <!-- Scripts -->
+        <script src="{{URL::asset('/asset/js/jquery.min.js')}}"></script>
+        <script src="{{URL::asset('/asset/jquery/jquery.js')}}"></script>
+        <script src="{{URL::asset('/asset/jquery-ui.min.js')}}"></script>
+        <script src="{{URL::asset('/asset/js/jquery.dropotron.min.js')}}"></script>
+        <script src="{{URL::asset('/asset/js/browser.min.js')}}"></script>
+        <script src="{{URL::asset('/asset/js/breakpoints.min.js')}}"></script>
+        <script src="{{URL::asset('/asset/js/util.js')}}"></script>
+        <script src="{{URL::asset('/asset/js/main.js')}}"></script>
+        <script src="{{URL::asset('/asset/js/main.js')}}"></script>
+
     </head>
 
     <body class="homepage is-preload">
