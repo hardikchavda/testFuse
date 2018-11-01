@@ -94,19 +94,19 @@ class test1 extends Controller {
     }
 
     public function formSubmit(Request $req) {
-        $usr = new User();
-        $usr->name = $req->fnm;
-        $usr->email = $req->mnm;
-        $usr->password = Hash::make($req->lnm);
-        $usr->remember_token = $req->_token;
-//        $usr->firstname = $req->fnm;
-//        $usr->middlename = $req->mnm;
-//        $usr->lastname = $req->lnm;
-//        $usr->address1 = $req->ad1;
-//        $usr->address2 = $req->ad2;
-//        $usr->pincode = $req->pin;
-//        $usr->state = $req->st;
-//        $usr->city = $req->city;
+        $usr = new userInfo();
+        //$usr->name = $req->fnm;
+        //  $usr->email = $req->mnm;
+        //  $usr->password = Hash::make($req->lnm);
+        //  $usr->remember_token = $req->_token;
+        $usr->firstname = $req->fnm;
+        $usr->middlename = $req->mnm;
+        $usr->lastname = $req->lnm;
+        $usr->address1 = $req->ad1;
+        $usr->address2 = $req->ad2;
+        $usr->pincode = $req->pin;
+        $usr->state = $req->st;
+        $usr->city = $req->city;
         $usr->save();
         return redirect()->back()->withSuccess('IT WORKS!');
     }
