@@ -29,9 +29,14 @@ Route::group(['middleware' => 'prevent-back-history'], function() {
 //Route::resource('crud', 'crudController');
 //Route::auth();
 //Route::get('/home', 'HomeController@index');
+Route::group(['middleware' => 'prevent-back-history'], function() {
 
+    Route::group(['middleware' => 'web'], function() {
 
+        Route::auth();
 
-Route::auth();
+        Route::get('admin/home', 'HomeController@index');
 
-Route::get('/home', 'HomeController@index');
+        Route::get('admin/welcome', 'HomeController@alldata');
+    });
+});
