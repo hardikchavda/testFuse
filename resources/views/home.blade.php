@@ -1,38 +1,11 @@
-@extends('layouts.footer')
-@extends('layouts.master')
-@extends('layouts.wrapper1')
-@section('idd')
-{{--
-{{$name}}
-@endsection
+@extends('adminlte::page')
 
-@section('idd1')
-{{$name1}}
-@if($data)
-True
-@else
-False
-@endif
+@section('title', 'AdminLTE')
 
-@unless(1==2)
-<div class="control-label">
-    Its quite complicated
-</div>
-@endunless
+@section('content_header')
+    <h1>Dashboard</h1>
+@stop
 
-@foreach($people as $person)
-{{$person}}
-@endforeach
---}}
-
-@if($dbTest=='laratest')
-@forelse($getAllUserName as $person)
-{{ $person->firstname }}
-{{ $person->lastname }}
-@empty
-Nothing
-@endforelse
-@endif
-@endsection
-
-@extends('layouts.header')
+@section('content')
+    <p>You are logged in!</p>
+@stop

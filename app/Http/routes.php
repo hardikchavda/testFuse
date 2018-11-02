@@ -32,6 +32,6 @@ Route::group(['middleware' => 'prevent-back-history'], function() {
 
 
 
+Route::auth();
 
-
-
+Route::get('/home', 'HomeController@index');
