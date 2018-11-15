@@ -60,4 +60,18 @@ class adminController extends Controller {
         return Redirect::to('/admin/alldata');
     }
 
+    public function create(Request $req) {
+        $data = new userInfo();
+        $this->validate($req, [
+            'firstname' => 'required',
+            'firstname' => 'alpha'
+        ]);
+        $data::create($req->all());
+        return new JsonResponse(['data' => 'success'], 200);
+    }
+
+    public function createNew() {
+        return view('/admin/createNew');
+    }
+
 }

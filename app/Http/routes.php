@@ -22,6 +22,8 @@ Route::group(['middleware' => 'prevent-back-history'], function() {
         Route::get('/admin/alldata', 'adminController@alldata');
         Route::get('/admin/{id}/edit', 'adminController@edit');
         Route::get('/admin/{id}/delete', 'adminController@delete');
+        Route::get('/admin/createNew', 'adminController@createNew');
+        Route::post('/admin/create', 'adminController@create');
         Route::patch('/admin/update/{id}', 'adminController@update');
         Route::delete('/admin/destroy/{id}', 'adminController@destroy');
     });
