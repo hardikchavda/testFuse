@@ -42,8 +42,12 @@
                 {!! Form::text('address1', null,['class'=>'form-control']) !!}
             </div>
             <div class="form-group">
-                {!! Form::label('ad2', 'Address2') !!}
-                {!! Form::text('address2', null,['class'=>'form-control']) !!}
+                {!! Form::label('ad2', 'Gender') !!}<br>
+                Male
+                {!! Form::radio('address2', true,['class'=>'form-control']) !!}
+                Female
+                {!! Form::radio('address2', ['class'=>'form-control']) !!}
+
             </div>
             <div class="form-group">
                 {!! Form::label('pin', 'Pincode') !!}
@@ -51,7 +55,7 @@
             </div>
             <div class="form-group">
                 {!! Form::label('st', 'State') !!}
-                {!! Form::text('state', null,['class'=>'form-control']) !!}
+                {!! Form::select('state', ['R'=>'Rajkot','A'=>'Ahmedabad','J'=>'Jamnagar'],null,['placeholder' => 'Select a city...'],['class'=>'form-control']) !!}
             </div>
             {!! Form::label('city', 'City') !!}
             {!! Form::text('city', null,['class'=>'form-control']) !!}
