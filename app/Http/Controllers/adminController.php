@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
+use App\Http\Requests\registeration;
 use App\User;
 use App\userInfo;
 use Auth;
@@ -60,12 +60,8 @@ class adminController extends Controller {
         return Redirect::to('/admin/alldata');
     }
 
-    public function create(Request $req) {
+    public function create(registeration $req) {
         $data = new userInfo();
-        $this->validate($req, [
-            'firstname' => 'required',
-            'firstname' => 'alpha'
-        ]);
         $data::create($req->all());
         return new JsonResponse(['data' => 'success'], 200);
     }

@@ -22,7 +22,9 @@ class registeration extends Request {
      */
     public function rules() {
         return [
-                //
+            'firstname' => 'required',
+            'lastname' => 'required',
+            'state' => 'required'
         ];
     }
 

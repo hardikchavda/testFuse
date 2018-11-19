@@ -27,15 +27,17 @@
             <div class="form-group">
                 {!! Form::label('fnm', 'Firstname') !!}
                 {!! Form::text('firstname', null,['class'=>'form-control']) !!}
-                <span id="field_error"></span>
+                <span id="firstname"></span>
             </div>
             <div class="form-group">
                 {!! Form::label('mnm', 'Middlename') !!}
                 {!! Form::text('middlename', null,['class'=>'form-control']) !!}
+                <span id="middlename"></span>
             </div>
             <div class="form-group">
                 {!! Form::label('lnm', 'Lastname') !!}
                 {!! Form::text('lastname', null,['class'=>'form-control']) !!}
+                <span id="lastname"></span>
             </div>
             <div class="form-group">
                 {!! Form::label('ad1', 'Address1') !!}
@@ -43,11 +45,18 @@
             </div>
             <div class="form-group">
                 {!! Form::label('ad2', 'Gender') !!}<br>
-                Male
-                {!! Form::radio('address2', true,['class'=>'form-control']) !!}
-                Female
-                {!! Form::radio('address2', ['class'=>'form-control']) !!}
-
+                <span class="radio">
+                    <label>
+                        {!! Form::radio('address2', 'Male',true,['class'=>'radio-inline']) !!}
+                        Male
+                    </label>
+                </span>
+                <span class="radio">
+                    <label>
+                        {!! Form::radio('address2', 'Female',false,['class'=>'radio-inline']) !!}
+                        Female
+                    </label>
+                </span>
             </div>
             <div class="form-group">
                 {!! Form::label('pin', 'Pincode') !!}
@@ -55,7 +64,8 @@
             </div>
             <div class="form-group">
                 {!! Form::label('st', 'State') !!}
-                {!! Form::select('state', ['R'=>'Rajkot','A'=>'Ahmedabad','J'=>'Jamnagar'],null,['placeholder' => 'Select a city...'],['class'=>'form-control']) !!}
+                {!! Form::select('state', ['R'=>'Rajkot','A'=>'Ahmedabad','J'=>'Jamnagar'],null,['placeholder' => 'Select a city...','class'=>'form-control']) !!}
+                <span id="state"></span>
             </div>
             {!! Form::label('city', 'City') !!}
             {!! Form::text('city', null,['class'=>'form-control']) !!}
@@ -103,11 +113,19 @@
                     error: function(data) {
                         var errors = data.responseJSON;
                         $.each(errors, function(key, val) {
-                            $("#field_error").text(val).css("color", "red");
+                            $("#" + key).text(val).css("color", "red");
                         });
                     }
                 });
     });
+
+    $('input[type=text],select').focus(function() {
+        $('#firstname').empty();
+        $('#lastname').empty();
+        $('#state').empty();
+    });
+
+
 </script>
 </div>
 @stop
