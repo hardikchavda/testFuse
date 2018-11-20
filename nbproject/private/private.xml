@@ -6,6 +6,7 @@
             <file>file:/C:/laragon/www/testFuseNew/resources/views/admin/edit.blade.php</file>
             <file>file:/C:/laragon/www/testFuseNew/app/Http/routes.php</file>
             <file>file:/C:/laragon/www/testFuseNew/app/userInfo.php</file>
+            <file>file:/C:/laragon/www/testFuseNew/app/Http/Requests/registeration.php</file>
             <file>file:/C:/laragon/www/testFuseNew/app/Http/Controllers/adminController.php</file>
             <file>file:/C:/laragon/www/testFuseNew/resources/views/admin/createNew.blade.php</file>
         </group>
