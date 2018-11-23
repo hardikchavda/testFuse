@@ -28,4 +28,11 @@ class registeration extends Request {
         ];
     }
 
+    public function messages() {
+        return[
+            'firstname.required' => ':attribute is not Filled and is compulsury.',
+            'required' => ':attribute should be filled.'
+        ];
+    }
+
 }
